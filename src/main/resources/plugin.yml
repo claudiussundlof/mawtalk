@@ -1,0 +1,31 @@
+name: MawTalk
+main: org.eu.mawtalk.MawTalk
+version: 1.0.0
+api-version: '1.21'
+description: Chat plugin with private messaging, ignore, and party features.
+
+commands:
+  msg:
+    description: Send a private message
+    aliases: [w, tell, pm]
+    usage: /msg <player> <message>
+  reply:
+    description: Reply to last messaged player
+    aliases: [r]
+    usage: /reply <message>
+  ignore:
+    description: Ignore a player (blocks private & public messages)
+    usage: /ignore <player>
+  unignore:
+    description: Stop ignoring a player
+    usage: /unignore <player>
+  ignorelist:
+    description: List players you are ignoring
+    usage: /ignorelist
+  mawtalk:
+    description: Show MawTalk help
+    aliases: [mt]
+    usage: /mawtalk
+  party:
+    description: Create and manage parties
+    usage: /party <create|invite|accept|leave|chat>
