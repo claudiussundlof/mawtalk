@@ -31,9 +31,9 @@ public class IgnoreCommand implements CommandExecutor {
             return true;
         }
 
-        Player target = plugin.getServer().getPlayer(args[0]);
-        if (target == null) {
-            p.sendMessage(Component.text("Player not found or not online.", NamedTextColor.RED));
+        var target = plugin.getServer().getOfflinePlayer(args[0]);
+        if (!target.hasPlayedBefore() && plugin.getServer().getPlayer(args[0]) == null) {
+            p.sendMessage(Component.text("Player not found.", NamedTextColor.RED));
             return true;
         }
 
